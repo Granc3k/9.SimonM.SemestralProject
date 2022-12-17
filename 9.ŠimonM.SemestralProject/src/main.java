@@ -19,7 +19,6 @@ public class main {
                     double[][] vypis = tools.SortSouradnic(souradnice, primka);
                     // vypis souradnic (promena "vypis")
                     tools.vypisSouradnic(vypis);
-                }
                 case "n", "N" -> {
                     System.out.println("Ukončuji program");
                     endProgram = true;
