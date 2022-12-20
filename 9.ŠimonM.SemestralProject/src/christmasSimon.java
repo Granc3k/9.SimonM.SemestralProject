@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 public class christmasSimon {
+	static Scanner sc = new Scanner(System.in);
 
 	public static void christmasProject(String[] args) {
 		int d, x, y, r, temp;
 		// in
-		Scanner sc = new Scanner(System.in);
 		System.out.print("Zadejte poloměr ozdoby:");
 		r = sc.nextInt();
 		d = 2 * r;

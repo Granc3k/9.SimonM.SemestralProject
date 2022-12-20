@@ -13,7 +13,7 @@ public class tools {
             a[i][1] = sc.nextDouble();
         }
         a[2][0] = a[0][0] - a[1][0]; // ax
-        a[2][1] = a[0][1] - a[0][1]; // y
+        a[2][1] = a[0][1] - a[1][1]; // y
         return a;
     }
 
@@ -38,7 +38,6 @@ public class tools {
         double[] vypocet = new double[souradnice.length];
         double a = primka[2][0];
         double b = primka[2][1];
-        double c = 0;
         for (int i = 0; i < souradnice.length; i++) {
             // vypocet vzdalenosti bodu od primky a importovani do tretiho sloupce
             double a1 = souradnice[i][0];
@@ -50,7 +49,7 @@ public class tools {
             if (b == 0 && a2 == 0) {// kdyz y=0 a bod je na ose x
                 v = 0;
             } else {// promenne do vzorce
-                v = Math.abs(a * a1 + b * a2 + c) / Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+                v = Math.abs(a * a1 + b * a2) / Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
             }
             vypocet[i] = v;
             souradnice[i][2] = v;

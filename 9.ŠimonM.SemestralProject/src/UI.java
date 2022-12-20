@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
 public class UI {
+    static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Zadejte jaky program chcete pustit program.");
         System.out.println("1 pro spusteni vanocni ulohy");
         System.out.println("2 pro spusteni semestralni prace");

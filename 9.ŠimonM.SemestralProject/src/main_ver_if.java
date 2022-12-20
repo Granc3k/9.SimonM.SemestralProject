@@ -15,7 +15,7 @@ public class main_ver_if {
         boolean endProgram = false;
         while (endProgram == false) { // while where whole program operates
             System.out.println("Pokracovat ve zpracovani (a/n):");
-            String inRozhodnuti = sc.nextLine(); // user input of choice for continuing/stopping
+            String inRozhodnuti = sc.nextLine(); // user input of choice for contine/stop
             if (inRozhodnuti.equals("a") || inRozhodnuti.equals("A")) { // if for continue
                 // main function
                 double[][] primka = tools.InputPrimky(); // input for line
@@ -28,7 +28,7 @@ public class main_ver_if {
                 System.out.println("Ukoncuji program...");
                 endProgram = true;
             } else { // invalid input
-                // invalid input for continuing/stopping program
+                // invalid input for continue/stop
                 System.out.println("Nezadal jste spravny parametr");
                 System.out.println("Zkuste akci opakovat znovu");
             }
