@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class main_ver_switch {
     static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void SemestralProjectSwitch(String[] args) {
         boolean endProgram = false; // boolean for stopping program
 
         while (endProgram == false) { // while where whole program operates

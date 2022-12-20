@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class main_ver_if {
     static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void SemestralProjectIf(String[] args) {
         boolean endProgram = false;
         while (endProgram == false) { // while where whole program operates
             System.out.println("Pokracovat ve zpracovani (a/n):");
