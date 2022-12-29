@@ -14,18 +14,18 @@ public class tools {
             a[i][0] = sc.nextDouble();
             a[i][1] = sc.nextDouble();
         }
-        if (a[0][0] > a[1][0]) {
+        if (a[0][0] > a[1][0]) { // porovnani jaky bod je vice vpravo na osach oxy
             x = a[0][0];
             y = a[0][1];
-            ax = a[0][0] - a[1][0]; // ax
-            by = a[0][1] - a[1][1]; // by
+            ax = a[0][1] - a[1][1]; // ax
+            by = -(a[0][0] - a[1][0]); // by
         } else {
             x = a[1][0];
             y = a[1][1];
             ax = a[1][0] - a[0][0]; // ax
             by = a[1][1] - a[0][1]; // by
         }
-        double c = -(ax * x) - (by * y);
+        double c = -(ax * x) - (by * y); // vypocet c pres vzorec
         primka[0] = ax;
         primka[1] = by;
         primka[2] = c;
@@ -66,17 +66,18 @@ public class tools {
 
         Arrays.sort(vypocet);
         /*
-         * double maxTemp=0;
-         * double temp=0;
-         * for(int i=0;i<vypocet.length;i++){
-         * if(vypocet[i]>vypocet[i+1]){
-         * temp=vypocet[i];
-         * vypocet[i]=vypocet[i+1];
-         * vypocet[i+1]=temp;
-         * i=0;
+         * double temp = 0;
+         * for (int i = 0; i < vypocet.length; i++) {
+         * if ((i + 1) != vypocet.length && vypocet[i] > vypocet[i + 1]) {
+         * temp = vypocet[i];
+         * vypocet[i] = vypocet[i + 1];
+         * vypocet[i + 1] = temp;
+         * i = 0;
          * }
          * }
          */
+
+        // mozno udelat takto, ale rychlejsi pres "Arrays.sort(vypocet)"
 
         // serazeni vysledku
         for (int i = 0; i < vypocet.length; i++) {// projede celou puvodni matici
