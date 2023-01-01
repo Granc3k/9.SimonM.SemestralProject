@@ -10,9 +10,9 @@ public class Test {
                 System.out.print(vypis[i][ii] + " ");
 
             }
-            System.out.println();
         }
-
+        System.out.println("sort dokončen");
+        // System.out.println(vypocet);
     }
 
 }

@@ -71,17 +71,18 @@ public class tools {
 
         Arrays.sort(vypocet);
         /*
-         * double maxTemp=0;
-         * double temp=0;
-         * for(int i=0;i<vypocet.length;i++){
-         * if(vypocet[i]>vypocet[i+1]){
-         * temp=vypocet[i];
-         * vypocet[i]=vypocet[i+1];
-         * vypocet[i+1]=temp;
-         * i=0;
+         * double temp = 0;
+         * for (int i = 0; i < vypocet.length; i++) {
+         * if ((i + 1) != vypocet.length && vypocet[i] > vypocet[i + 1]) {
+         * temp = vypocet[i];
+         * vypocet[i] = vypocet[i + 1];
+         * vypocet[i + 1] = temp;
+         * i = 0;
          * }
          * }
          */
+
+        // mozno udelat takto, ale rychlejsi pres "Arrays.sort(vypocet)"
 
         // serazeni vysledku
         for (int i = 0; i < vypocet.length; i++) {// projede celou puvodni matici
