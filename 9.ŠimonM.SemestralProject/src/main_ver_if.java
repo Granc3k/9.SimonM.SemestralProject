@@ -18,7 +18,7 @@ public class main_ver_if {
             String inRozhodnuti = sc.nextLine(); // user input of choice for contine/stop
             if (inRozhodnuti.equals("a") || inRozhodnuti.equals("A")) { // if for continue
                 // main function
-                double[] primka = tools.InputPrimky(); // input for line
+                double[][] primka = tools.InputPrimky(); // input for line
                 double[][] body = tools.InputSouradnic(); // input for points
                 double[][] vypis = tools.SortSouradnic(body, primka); // sorts points
                 tools.vypisSouradnic(vypis); // print

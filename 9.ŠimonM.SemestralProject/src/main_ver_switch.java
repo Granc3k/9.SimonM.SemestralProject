@@ -20,8 +20,8 @@ public class main_ver_switch {
             switch (inRozhodnuti) { // switch for input
                 case "a", "A" -> { // continue
                     // main function
-                    double[] primka = tools.InputPrimky(); // input line
-                    double[][] body = tools.InputSouradnic(); // input points
+                    double[][] primka = tools.InputPrimky(); // input for line
+                    double[][] body = tools.InputSouradnic(); // input for points
                     double[][] vypis = tools.SortSouradnic(body, primka); // sorts points
                     tools.vypisSouradnic(vypis); // print
 

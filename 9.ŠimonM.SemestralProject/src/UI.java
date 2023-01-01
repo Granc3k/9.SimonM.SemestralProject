@@ -19,7 +19,8 @@ public class UI {
                 }
                 case 2 -> {
                     System.out.println("Spoustim semestralni praci");
-                    main_ver_if.SemestralProjectIf(args);
+                    main_ver_switch.SemestralProjectSwitch(args);
+                    // main_ver_if.SemestralProjectIf(args);
                     break;
                 }
                 case 0 -> {
@@ -34,6 +35,6 @@ public class UI {
                 }
             }
         }
-        System.out.println("UI ukončeno");
+        System.out.println("UI ukonceno");
     }
 }

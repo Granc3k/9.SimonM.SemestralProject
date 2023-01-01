@@ -4,31 +4,30 @@ import java.util.Arrays;
 public class tools {
     static Scanner sc = new Scanner(System.in);
 
-    public static double[] InputPrimky() {
+    public static double[][] InputPrimky() {
         double ax, by, x, y;
-        double[] primka = new double[3];
         System.out.println("Zadej body primky:");
         // vezme body primky
-        double[][] a = new double[2][2];
+        double[][] primka = new double[3][3];
         for (int i = 0; i < 2; i++) {
-            a[i][0] = sc.nextDouble();
-            a[i][1] = sc.nextDouble();
+            primka[i][0] = sc.nextDouble();
+            primka[i][1] = sc.nextDouble();
         }
-        if (a[0][0] > a[1][0]) {
-            x = a[0][0];
-            y = a[0][1];
-            ax = a[0][0] - a[1][0]; // ax
-            by = a[0][1] - a[1][1]; // by
+        if (primka[0][0] > primka[1][0]) {
+            x = primka[0][0];
+            y = primka[0][1];
+            ax = primka[0][0] - primka[1][0]; // ax
+            by = primka[0][1] - primka[1][1]; // by
         } else {
-            x = a[1][0];
-            y = a[1][1];
-            ax = a[1][0] - a[0][0]; // ax
-            by = a[1][1] - a[0][1]; // by
+            x = primka[1][0];
+            y = primka[1][1];
+            ax = primka[1][0] - primka[0][0]; // ax
+            by = primka[1][1] - primka[0][1]; // by
         }
         double c = -(ax * x) - (by * y);
-        primka[0] = ax;
-        primka[1] = by;
-        primka[2] = c;
+        primka[2][0] = ax;
+        primka[2][1] = by;
+        primka[2][2] = c;
         return primka;
     }
 
@@ -47,19 +46,25 @@ public class tools {
         return inputVys;
     }
 
-    public static double[][] SortSouradnic(double[][] body, double[] primka) {
+    public static double[][] SortSouradnic(double[][] body, double[][] primka) {
         // provede sort v zadanych bodech
         double[][] sortVypis = new double[body.length][body[0].length - 1];
         double[] vypocet = new double[body.length];
-        double a = primka[0];
-        double b = primka[1];
-        double c = primka[2];
+        double a = primka[2][0];
+        double b = primka[2][1];
+        double c = primka[2][2];
         for (int i = 0; i < body.length; i++) {
             // vypocet vzdalenosti bodu od primky a importovani do tretiho sloupce
             double a1 = body[i][0];
             double a2 = body[i][1];
             double v;// promenne do vzorce
-            v = Math.abs(a * a1 + b * a2 + c) / Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+            if (a == 0 && a1 == 0) {
+                v = 0;
+            } else if (b == 0 && a2 == 0) {
+                v = 0;
+            } else {
+                v = Math.abs(a * a1 + b * a2 + c) / Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+            }
             vypocet[i] = v;
             body[i][2] = v;
         }
