@@ -18,10 +18,12 @@ public class main_ver_if {
             String inRozhodnuti = sc.nextLine(); // user input of choice for contine/stop
             if (inRozhodnuti.equals("a") || inRozhodnuti.equals("A")) { // if for continue
                 // main function
-                double[][] primka = tools.InputPrimky(); // input for line
-                double[][] body = tools.InputSouradnic(); // input for points
-                double[][] vypis = tools.SortSouradnic(body, primka); // sorts points
-                tools.vypisSouradnic(vypis); // print
+                double[][] primka = tools.inputPrimky();
+                double[] rce = tools.vypocetRcePrimky(primka);
+                double[][] body = tools.inputSouradnic();
+                double[][] bodySeVzdalenosti = tools.vypocetVzdalenosti(body, rce);
+                double[][] vypis = tools.sortVzdalenosti(bodySeVzdalenosti);
+                tools.vypisSouradnic(vypis);
 
             } else if (inRozhodnuti.equals("n") || inRozhodnuti.equals("N")) { // if for stop
                 // program stops

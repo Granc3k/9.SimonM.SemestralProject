@@ -20,11 +20,12 @@ public class main_ver_switch {
             switch (inRozhodnuti) { // switch for input
                 case "a", "A" -> { // continue
                     // main function
-                    double[][] primka = tools.InputPrimky(); // input for line
-                    double[][] body = tools.InputSouradnic(); // input for points
-                    double[][] vypis = tools.SortSouradnic(body, primka); // sorts points
-                    tools.vypisSouradnic(vypis); // print
-
+                    double[][] primka = tools.inputPrimky();
+                    double[] rce = tools.vypocetRcePrimky(primka);
+                    double[][] body = tools.inputSouradnic();
+                    double[][] bodySeVzdalenosti = tools.vypocetVzdalenosti(body, rce);
+                    double[][] vypis = tools.sortVzdalenosti(bodySeVzdalenosti);
+                    tools.vypisSouradnic(vypis);
                 }
                 case "n", "N" -> { // stop
                     // program stops

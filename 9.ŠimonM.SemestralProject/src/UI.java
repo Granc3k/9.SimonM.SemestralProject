@@ -10,7 +10,7 @@ public class UI {
             System.out.println("1 pro spusteni vanocni ulohy");
             System.out.println("2 pro spusteni semestralni prace");
             System.out.println("0 pro ukonceni programu.");
-            int vyber = sc.nextInt();
+            int vyber = sc.nextInt(); // input for switch
             switch (vyber) {
                 case 1 -> {
                     System.out.println("Spoustim vanocni ulohu");

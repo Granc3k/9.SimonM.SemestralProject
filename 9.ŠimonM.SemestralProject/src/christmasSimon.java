@@ -6,7 +6,7 @@ public class christmasSimon {
 	public static void christmasProject(String[] args) {
 		int d, x, y, r, temp;
 		// in
-		System.out.print("Zadejte poloměr ozdoby:");
+		System.out.print("Zadejte polomer ozdoby:");
 		r = sc.nextInt();
 		d = 2 * r;
 		// print
@@ -29,6 +29,6 @@ public class christmasSimon {
 		}
 		System.out.println();
 		System.out.println();
-		System.out.println("Veselé Vánoce :)");
+		System.out.println("Vesele Vanoce :)");
 	}
 }
