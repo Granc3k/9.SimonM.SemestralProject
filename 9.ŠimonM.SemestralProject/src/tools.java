@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class tools {
     static Scanner sc = new Scanner(System.in);
 
+    /**
+     * input of a line by 2 points
+     */
     public static double[][] inputPrimky() {
-        /**
-         * input of a line by 2 points
-         */
         System.out.println("Zadej body primky:");
         double[][] primka = new double[2][2];
         for (int i = 0; i < 2; i++) {
@@ -16,11 +16,11 @@ public class tools {
         return primka;
     }
 
+    /**
+     * calculation of an normal equation of line
+     * "ax+by+c=0"
+     */
     public static double[] vypocetRcePrimky(double[][] primka) {
-        /**
-         * calculation of an normal equation of line
-         * "ax+by+c=0"
-         */
         double[] rce = new double[3];
         double a, b, x, y;
         if (primka[0][0] > primka[1][0]) { // 1. point is more right on axis X then 2. point
@@ -41,10 +41,11 @@ public class tools {
         return rce;
     }
 
+    /**
+     * method for input of points that user want to sort
+     */
     public static double[][] inputSouradnic() {
-        /**
-         * method for input of points that user want to sort
-         */
+
         System.out.println("Zadejte pocet bodu:");
         int pointCount = sc.nextInt();
         double[][] body = new double[pointCount][3];
@@ -57,10 +58,10 @@ public class tools {
         return body;
     }
 
+    /**
+     * method for calculation of a distance between points and line
+     */
     public static double[][] vypocetVzdalenosti(double[][] body, double[] rce) {
-        /**
-         * method for calculation of a distance between points and line
-         */
         double a = rce[0];
         double b = rce[1];
         double c = rce[2];
@@ -80,10 +81,10 @@ public class tools {
         return body;
     }
 
+    /**
+     * method that sorts inputed 2D array via bubble sort
+     */
     public static double[][] sortVzdalenosti(double[][] body) {
-        /**
-         * method that sorts inputed 2D array via bubble sort
-         */
         double[] tempPole = new double[2];
         for (int i = 0; i < body.length; i++) {
             for (int j = 1; j < (body.length - i); j++) {
@@ -97,10 +98,10 @@ public class tools {
         return body;
     }
 
+    /**
+     * method that prints out sorted 2D array
+     */
     public static void vypisSouradnic(double[][] matrix) {
-        /**
-         * method that prints out sorted 2D array
-         */
         System.out.println("Setridene body:");
         for (int i = 0; i < matrix.length; i++) {
             String temp = "";

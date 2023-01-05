@@ -5,7 +5,7 @@ import java.util.Scanner;
  * inputed line
  * 
  * @author marts
- * @version 1.0 15/12/22
+ * @version 1.4 5/1/23
  */
 
 public class main_ver_switch {
